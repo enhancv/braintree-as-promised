@@ -1,5 +1,6 @@
 # braintree-as-promised
 [![Build Status](https://secure.travis-ci.org/enhancv/braintree-as-promised.png?branch=master)](http://travis-ci.org/enhancv/braintree-as-promised)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/061c718ec2594bcc8edee6d40de0b503)](https://www.codacy.com/app/ivank/braintree-as-promised)
 
 Add native promises to braintree gateway
 

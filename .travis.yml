@@ -6,6 +6,15 @@ before_script:
   - npm install codacy-coverage mocha-lcov-reporter
 script:
   - node_modules/.bin/eslint {src,test}
-  - node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- -R spec
+  - node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- -R
+  spec
 after_script:
   - cat coverage/lcov.info | node_modules/.bin/codacy-coverage
+deploy:
+  provider: npm
+  email: ikerin@gmail.com
+  api_key:
+    secure: bfF8eBdUQ8giBLe6QIRZuXZ/+/neTgbYGldhWLP1xcLUB115EriUmcjRXHN+hAXozM7bYZI6mp+CPXH85L4Y9GveMiWjuedCFp35FvdnZWM+wT4tE7teVXoyt8cWuoktE0Ii/jFEJMiRZbbnFIwfo17jeUxSjAauQzsM4DmBI8ydHsk7eLGoEpmB3Y26Oj9aAb+LgqFWOZyB3J1wS0IvpWhn692zvmH49vShbVNzrdTpRFe2pdbMp8kwHmogZ7R43ss9Yeb7B5r+kI9J0MlQsuGM8yXejdQ/B26gQx4ORHl8qYYiDyY15OCypTgSbpktxwzT40yVp0NQOUw+cy51QgDJsNLKt/Tj7Yz/KJGo8brXM7W381ZlNKGbOsZXiZAQcQ7/dl8I1TtRJ+W0hmFTWHdk/FE9XCNm8kQJDM1Vbp5sTvDaZQafL+IvjaZu75PVgLdUnB0aMyJJfBFAci9oeSczuKtBB5uYCyY/0jCe/wv7Gex+DUpZBu6qlAB+VvqFnMAjWHnWuAu5W1vyLpqyKwF4zE74EzikGqLIna3+82B6m9KZrNXRVhWJtAMvsvzXXLUMZ4Eez6bmXuErSFPTvAO0IVEbjy9PDw9zJk1xYwrPQCwpuHN2ytBYbFmx4+vmJiuq+dR8jVQuZZpq64GpXU9LDXhxQ28ZqYlXEtuU/VU=
+  on:
+    tags: true
+    repo: enhancv/braintree-as-promised
