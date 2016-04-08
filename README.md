@@ -30,7 +30,7 @@ gateway.transaction
 
 ## Documantation
 
-calling `promised(gateway)` will return a new gateway object with all the methods converted to promise-based, using native promises. You can continue to use your gateway object normall, as it does not change anything there
+calling `promised(gateway)` will return a new gateway object with all the methods converted to promise-based ones, using native promises. You can continue to use your gateway object normal, as it does not change anything on the original object.
 
 Additionally it handles the "result.success" parameter, so that if success === false, the promise is rejected with the returned error message.
 
