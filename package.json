@@ -20,17 +20,23 @@
       "url": "https://github.com/enhancv/braintree-as-promised/blob/master/LICENSE-MIT"
     }
   ],
-  "main": "src/promised",
+  "main": "lib/promised",
   "engines": {
     "node": ">= 5.0.0"
   },
   "scripts": {
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build",
     "test": "node_modules/.bin/mocha test"
   },
   "peerDependencies": {
     "braintree": "^1.37.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-core": "^6.7.6",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-preset-stage-0": "^6.5.0",
     "braintree": "^1.37.0",
     "chai": "^3.5.0",
     "eslint": "^2.6.0",
