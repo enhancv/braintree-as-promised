@@ -83,8 +83,8 @@ module.exports = function promised(gateway) {
             void: null,
         },
         webhookNotification: {
-            parse: null
-        }
+            parse: null,
+        },
     };
 
     for (const name in modules) {
