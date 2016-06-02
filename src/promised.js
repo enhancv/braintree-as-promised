@@ -82,6 +82,9 @@ module.exports = function promised(gateway) {
             submitForSettlement: null,
             void: null,
         },
+        webhookNotification: {
+            parse: null
+        }
     };
 
     for (const name in modules) {
