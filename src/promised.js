@@ -22,6 +22,12 @@ function promiseCallback(object, method) {
 
 module.exports = function promised(gateway) {
     const modules = {
+        address: {
+            create: null,
+            update: null,
+            find: null,
+            delete: null,
+        },
         addOn: {
             all: null,
         },
