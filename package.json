@@ -1,7 +1,7 @@
 {
   "name": "braintree-as-promised",
   "description": "Add native promises to braintree gateway",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "homepage": "https://github.com/enhancv/braintree-as-promised",
   "author": {
     "name": "Ivan Kerin",
