@@ -46,6 +46,19 @@ describe('Braintree as promised', () => {
             });
     });
 
+    it('Should return true if no response is returned', () => {
+        const promisedGateway = promised({
+            address: {
+                delete: (object, cb) => cb(null),
+            },
+        });
+
+        return promisedGateway.address.delete({})
+            .then((result) => {
+                assert.isUndefined(result);
+            });
+    });
+
     it('Should handle exceptions as rejection', () => {
         const promisedGateway = promised({
             clientToken: {
