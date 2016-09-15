@@ -15,7 +15,7 @@ function promiseCallback(object, method) {
                 return resolve(result);
             }
 
-            object[method](...arguments, callback);
+            object[method].apply(object, Array.prototype.slice.call(arguments).concat([callback]));
         });
     };
 }
