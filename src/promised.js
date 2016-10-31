@@ -91,6 +91,13 @@ module.exports = function promised(gateway) {
         webhookNotification: {
             parse: null,
         },
+        testing: {
+            settle: null,
+            settlementPending: null,
+            settlementConfirm: null,
+            settlementDecline: null,
+            settlementOperationWithEnvironmentCheck: null,
+        },
     };
 
     for (const name in modules) {
