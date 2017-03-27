@@ -1,7 +1,7 @@
 # braintree-as-promised
-[![Build Status](https://secure.travis-ci.org/enhancv/braintree-as-promised.png?branch=master)](http://travis-ci.org/enhancv/braintree-as-promised)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/061c718ec2594bcc8edee6d40de0b503)](https://www.codacy.com/app/ivank/braintree-as-promised)
-[![Codacy Badge](https://api.codacy.com/project/badge/coverage/061c718ec2594bcc8edee6d40de0b503)](https://www.codacy.com/app/ivank/braintree-as-promised)
+[![Build Status](https://travis-ci.org/enhancv/braintree-as-promised.svg?branch=master)](https://travis-ci.org/enhancv/braintree-as-promised)
+[![Code Climate](https://codeclimate.com/github/enhancv/braintree-as-promised/badges/gpa.svg)](https://codeclimate.com/github/enhancv/braintree-as-promised)
+[![Test Coverage](https://codeclimate.com/github/enhancv/braintree-as-promised/badges/coverage.svg)](https://codeclimate.com/github/enhancv/braintree-as-promised/coverage)
 
 Add native promises to braintree gateway
 
