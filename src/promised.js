@@ -98,8 +98,8 @@ module.exports = function promised(gateway) {
         },
     };
 
-    for (const name in modules) {
-        for (const method in modules[name]) {
+    for (var name in modules) {
+        for (var method in modules[name]) {
             modules[name][method] = promiseCallback(gateway[name], method);
         }
     }
