@@ -1,6 +1,10 @@
-const assert = require('chai').assert;
+const assert = require('assert');
 const braintree = require('braintree');
 const promised = require('../src/promised');
+const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const gateway = braintree.connect({
     environment: braintree.Environment.Sandbox,
@@ -15,8 +19,8 @@ describe('Braintree as promised', () => {
 
         return promisedGateway.clientToken.generate({})
             .then((result) => {
-                assert.isTrue(result.success);
-                assert.isString(result.clientToken);
+                assert.ok(result.success);
+                assert.ok(result.clientToken);
             });
     });
 
@@ -55,7 +59,7 @@ describe('Braintree as promised', () => {
 
         return promisedGateway.address.delete({})
             .then((result) => {
-                assert.isUndefined(result);
+                assert.ok(!result);
             });
     });
 

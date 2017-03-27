@@ -1,5 +1,3 @@
-'use strict';
-
 function promiseCallback(object, method) {
     return function promisify() {
         return new Promise((resolve, reject) => {

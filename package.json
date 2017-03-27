@@ -1,7 +1,7 @@
 {
   "name": "braintree-as-promised",
   "description": "Add native promises to braintree gateway",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/enhancv/braintree-as-promised",
   "author": {
     "name": "Ivan Kerin",
@@ -25,19 +25,18 @@
     "node": ">= 5.0.0"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha test"
+    "lint": "node node_modules/eslint/bin/eslint src",
+    "coverage": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- --recursive",
+    "test": "node node_modules/mocha/bin/mocha --recursive"
   },
   "peerDependencies": {
-    "braintree": "^1.37.0"
+    "braintree": "^1.37.0||^2.0.0"
   },
   "devDependencies": {
-    "braintree": "^1.37.0",
-    "chai": "^3.5.0",
-    "eslint": "^2.6.0",
-    "eslint-config-airbnb": "^6.2.0",
-    "eslint-plugin-react": "^4.2.3",
-    "istanbul": "^0.4.2",
-    "mocha": "^2.4.5"
+    "braintree": "^1.37.0||^2.0.0",
+    "istanbul": "^0.4.5",
+    "dotenv": "^4.0.0",
+    "mocha": "^3.2.0"
   },
   "keywords": []
 }
