@@ -7,7 +7,9 @@ function promiseCallback(object, method) {
                 }
 
                 if (result && result.success === false) {
-                    return reject(new Error(result.message));
+                    var error = new Error(result.message);
+                    error.result = result;
+                    return reject(error);
                 }
 
                 return resolve(result);
