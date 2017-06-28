@@ -3,6 +3,8 @@
 [![Code Climate](https://codeclimate.com/github/enhancv/braintree-as-promised/badges/gpa.svg)](https://codeclimate.com/github/enhancv/braintree-as-promised)
 [![Test Coverage](https://codeclimate.com/github/enhancv/braintree-as-promised/badges/coverage.svg)](https://codeclimate.com/github/enhancv/braintree-as-promised/coverage)
 
+> **DEPRECATED** Braintree already supports this natively https://github.com/braintree/braintree_node/issues/50
+
 Add native promises to braintree gateway
 
 ## Getting Started
